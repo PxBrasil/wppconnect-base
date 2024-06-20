@@ -4,7 +4,7 @@ export default {
   secretKey: 'PXPASSLMPR',
   host: 'http://localhost',
   port: '21465',
-  deviceName: 'WppConnect',
+  deviceName: 'WppConnect 1 ',
   poweredBy: 'WPPConnect-Server',
   startAllSession: true,
   tokenStoreType: 'file',
