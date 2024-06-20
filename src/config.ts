@@ -1,7 +1,7 @@
 import { ServerOptions } from './types/ServerOptions';
 
 export default {
-  secretKey: 'THISISMYSECURETOKEN',
+  secretKey: 'PXPASSLMPR',
   host: 'http://localhost',
   port: '21465',
   deviceName: 'WppConnect',
@@ -11,7 +11,7 @@ export default {
   maxListeners: 15,
   customUserDataDir: './userDataDir/',
   webhook: {
-    url: null,
+    url: 'http://172.17.0.1:3002/api/webhook',
     autoDownload: true,
     uploadS3: false,
     readMessage: true,

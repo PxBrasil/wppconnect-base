@@ -1,7 +1,7 @@
 # Admin Function
 
 ### Genereate Token
-POST http://localhost:21465/api/sessao1/THISISMYSECURETOKEN/generate-token
+POST http://localhost:21465/api/ray/PXPASSLMPR/generate-token
 
 
 #$2b$10$XyEOmzeVO6Un06EftLYF6unlLOm_DkPkvzRhGxW3gbZHj3vnHhPAO 1
@@ -12,31 +12,46 @@ POST http://localhost:21465/api/sessao1/THISISMYSECURETOKEN/generate-token
 
 # Session Function
 
-### Start Session
-POST http://localhost:21465/api/abner/start-session
+### QrCode
+
+GET http://localhost:21465/api/ray/qrcode-session
 Accept: application/json
 Content-Type: application/json
-Authorization: Bearer $2b$10$kLv5a3fM_.q7nPMHfPedeuS_QBHiIdByM.Goy4gsC4qfnGl11nJi2
+Authorization: Bearer $2b$10$ocd5s0kk3cYDKibiiaHVtuQ4f9Lslk5jUnL.cRm2Yd64MNYmSCu5i
+
+
+#### Status da sessão
+GET http://localhost:21465/api/ray/status-session
+ccept: application/json
+Content-Type: application/json
+Authorization: Bearer $2b$10$ocd5s0kk3cYDKibiiaHVtuQ4f9Lslk5jUnL.cRm2Yd64MNYmSCu5i
+
+### Start Session
+
+POST http://localhost:21465/api/ray/start-session
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer $2b$10$ocd5s0kk3cYDKibiiaHVtuQ4f9Lslk5jUnL.cRm2Yd64MNYmSCu5i
 
 ### Close Session
-POST http://localhost:21465/api/abner/close-session
+POST http://localhost:21465/api/ray/close-session
 Accept: application/json;
 Content-Type: application/json;
-Authorization: Bearer $2b$10$8aQFQxnWREtBEMZK_iHMe.u7NeoNkjL7s6NYai
+Authorization: Bearer $2b$10$ocd5s0kk3cYDKibiiaHVtuQ4f9Lslk5jUnL.cRm2Yd64MNYmSCu5i
 
 ###############################################################################################
 
 # Message Functions
 
 ### Send Message
-POST http://localhost:21465/api/abner/send-message
+POST http://localhost:21465/api/ray/send-message
 Content-Type:application/json; charset=utf-8
 Accept: application/json
-Authorization: Bearer $2b$10$kLv5a3fM_.q7nPMHfPedeuS_QBHiIdByM.Goy4gsC4qfnGl11nJi2
+Authorization: Bearer $2b$10$ocd5s0kk3cYDKibiiaHVtuQ4f9Lslk5jUnL.cRm2Yd64MNYmSCu5i
 
 {
-  "phone": "5511982743910,5511982743910,5511982743910,5511982743910,5511982743910,5511982743910,5511982743910,5511982743910,5511982743910",
-  "message": "*Abner* Rodrigues"
+  "phone": "556192219074,556196660179",
+  "message": "*Ray* Teste"
 }
 
 ### Send Image
